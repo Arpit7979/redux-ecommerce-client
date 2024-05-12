@@ -1,1 +1,1 @@
-export const uri = "http://localhost:5000/api"
+export const uri = "https://redux-ecommerce-server.onrender.com/api"
