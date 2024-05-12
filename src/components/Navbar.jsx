@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <Link to="/">
-      <h2>Ark Shop</h2>
+      <h2>ArkShop</h2>
       </Link>
       <Link to="/cart">
       <div className="bag-container">
@@ -26,6 +26,7 @@ const Navbar = () => {
       </span>
       </div>
       </Link>
+      <div className='nav-link'>
       {
         auth._id?<Logout onClick={()=>{
           dispatch(logoutUser(null));
@@ -35,6 +36,7 @@ const Navbar = () => {
           <Link to={"/register"} >Register</Link>
         </Navlink>
       }
+      </div>
     </nav>
   )
 }

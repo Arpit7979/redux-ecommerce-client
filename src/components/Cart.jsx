@@ -114,7 +114,7 @@ const Cart = () => {
                   </div>
                  </div>
                  <div className="cart-price">
-                  RS {item.price}
+                 ₹ {item.price}
                  </div>
                  <div className="cart-quantity">
                   <button onClick={()=>dispatch(decreaseCartQuantity(item))}>-</button>
@@ -122,7 +122,7 @@ const Cart = () => {
                   <button onClick={()=>dispatch(increaseCartQuantity(item))}>+</button>
                  </div>
                  <div className="cart-total-price">
-                  RS {item.price*item.cartQuantity}
+                 ₹ {item.price*item.cartQuantity}
                  </div>
                 </div>
               ))
@@ -131,9 +131,9 @@ const Cart = () => {
           <div className="cart-summary">
             <button onClick={()=>dispatch(clearCart())} className='clear-cart'>Clear Cart</button>
             <div className="cart-checkout">
-              <div className="subtotal">
+              <div className="subtotal ">
                 <span>Subtotal</span>
-                <span>{cart.cartTotalAmount}</span>
+                <span className='subtotal-price'>₹{cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and charges applicable at checkout</p>
               {
