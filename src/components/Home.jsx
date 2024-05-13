@@ -4,6 +4,7 @@ import "../App.css"
 import { useDispatch } from 'react-redux'
 import { addToCart, cartTotal } from '../features/cartSlice'
 import { useNavigate} from "react-router"
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 
 
@@ -21,7 +22,15 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {isLoading?(<p>Loading....</p>):error?(<p>An error occoured...</p>):<>
+      {isLoading?(
+        <div className='loader'>
+        <ClimbingBoxLoader
+        color="#151515"
+        loading={isLoading}
+        size={30}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      /></div>):error?(<p>An error occoured...</p>):<>
         <h2>New Arrival</h2>
         <div className="products">
           {
